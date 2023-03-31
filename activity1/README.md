@@ -66,6 +66,14 @@ Discuss the difference between
 - begin() and cbegin()
 - end() and cend()
 
+the answer:
+The difference between
+
+- Size() and capacity(): size() returns the number of elements in the vector container.
+Vector Capacity: various functions that act on vectors to determine their size, maximum size, etc.
+- begin() and cbegin():begin(): Returns iterator pointed to the first element of the vector container. cbegin(): Returns a constant iterator pointing to the first element in the vector container.
+- end() and cend(): end(): Returns an iterator pointing to the element that follows the last element in the vector. cend(): Returns a constant iterator pointing to the element following the last element of the vector container.
+
 ## Links
 
 1. https://cpp.sh/

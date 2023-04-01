@@ -39,6 +39,14 @@ Large community of users: The STL is widely used, which means that there is a la
 
 - Refer to the following article. Reflect on the difference between Big Oh and little oh
   https://www.baeldung.com/cs/big-o-vs-little-o-notation
+  the answer: Big-O and little-o notations have very similar definitions, and their difference lies in how strict they are regarding the upper bound they represent.
+  the difference is that big-O may be asymptotically tight while little-o makes sure that the upper bound isn’t asymptotically tight.
+  So O(g(n)) is a set of functions that are, after n_0, smaller than or equal to g(n). The function’s behavior before n_0 is unimportant since big-O notation (also little-o notation) analyzes the function for huge numbers.
+  Little-o notation is used to denote an upper-bound that is not asymptotically tight. It is formally defined as:
+
+o(g(n)) = \{f(n): for any positive constant c, there exists positive constant n_0 such that 0 \le f(n) < cg(n) for all n \ge n_0\}.
+
+In this definition, the set of functions f(n) are strictly smaller than cg(n), meaning that little-o notation is a stronger upper bound than big-O notation. In other words, the little-o notation does not allow the function f(n) to have the same growth rate as g(n).
 
 ## Task 4
 
@@ -47,3 +55,10 @@ Refer to one of the following articles. Reflect on the differences between Big O
 - https://jarednielsen.com/big-o-omega-theta/
 - https://www.codeandgadgets.com/big-oh-big-omega-and-theta-definitions/
 - https://www.geeksforgeeks.org/difference-between-big-oh-big-omega-and-big-theta/
+
+the answer:
+We can think of Big O, Big Omega, and Big Theta like conditional operators:
+
+Big O is like <=, meaning the rate of growth of an algorithm is less than or equal to a specific value, e.g: f(x) <= O(n^2)
+Big Omega is like >=, meaning the rate of growth is greater than or equal to a specified value, e.g: f(x) >= Ω(n).
+Big Theta is like ==, meaning the rate of growth is equal to a specified value, e.g: f(x) = Θ(n^2).
